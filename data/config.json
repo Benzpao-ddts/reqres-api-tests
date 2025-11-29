@@ -1,0 +1,56 @@
+{
+  "api": {
+    "baseUrl": "https://reqres.in/api",
+    "headers": {
+      "x-api-key": "reqres-free-v1"
+    }
+  },
+
+  "payloads": {
+    "createUser": {
+      "name": "Automation Tester",
+      "job": "QA Engineer"
+    },
+    "updateUser": {
+        "name": "Jane Automation Tester",
+        "job": "Lead QA Engineer"
+    }
+  },
+
+  "files": {
+    "userId": "data/user_id.json"
+  },
+
+  "validation": {
+    "getAllUsers": {
+      "testName": "Get All Users - Should fetch all users and save a random user ID",
+      "status": 200,
+      "schema": "data/schemas/get_all_users_schema.json",
+      "maxTime": 2000
+    },
+    "getSingleUser": {
+      "testName": "Get Single User - Should return a valid user by user ID",
+      "status": 200,
+      "schema": "data/schemas/get_single_user_schema.json",
+      "maxTime": 2000
+    },
+    "createUser": {
+      "testName": "Create User - Should successfully create a new user",
+      "status": 201,
+      "schema": "data/schemas/create_user_schema.json",
+      "maxTime": 2000
+    },
+    "updateUser": {
+      "testName": "Update User - Should successfully update user information",
+      "status": 200,
+      "schema": "data/schemas/update_user_schema.json",
+      "maxTime": 2000
+    },
+    "deleteUser": {
+      "testName": "Delete User - Should successfully delete a user by ID",
+      "status": 204,
+      "schema": null,
+      "maxTime": 2000
+    }
+  }
+}

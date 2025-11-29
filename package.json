@@ -1,0 +1,12 @@
+{
+  "name": "reqres-api-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test:all": "node test_cases/get_all_users.js && node test_cases/create_user.js && node test_cases/get_single_user.js && node test_cases/update_user.js && node test_cases/delete_user.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ajv": "^8.13.0",
+    "ajv-formats": "^2.1.1"
+  }
+}
